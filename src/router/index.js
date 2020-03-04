@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Profile from '../views/Profile'
-import SixshooterArtist from '../components/SixshooterArtist'
-import SixshooterLabel from '../components/SixshooterLabel'
+import TableauEmbed from '../components/TableauEmbed'
+import AirtableEmbed from '../components/AirtableEmbed'
 
 import { authGuard } from '../auth/authGuard'
 
@@ -24,13 +24,45 @@ const routes = [
   {
     path: '/profile/sixshooter-artist',
     name: 'sixshooter-artist',
-    component: SixshooterArtist,
+    component: TableauEmbed,
+    props: {
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/TDSArtistDashboard?:embed=yes:toolbar=no',
+      width: '1100',
+      height: '100%'
+    },
     beforeEnter: authGuard
   },
   {
     path: '/profile/sixshooter-label',
     name: 'sixshooter-label',
-    component: SixshooterLabel,
+    component: TableauEmbed,
+    props: {
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/SixshooterDashboard?:embed=yes:toolbar=no',
+      width: '1100',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
+    path: '/profile/sixshooter-adtracker',
+    name: 'sixshooter-adtracker',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shru0eyoslvCK8TpZ?backgroundColor=green&viewControls=on',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
+    path: '/profile/sixshooter-roster',
+    name: 'sixshooter-roster',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shrLMs4FmRILi0MtW?backgroundColor=blue&viewControls=on',
+      width: '100%',
+      height: '100%'
+    },
     beforeEnter: authGuard
   }
 ]

@@ -1,6 +1,6 @@
 <template lang="html">
   <nav id="nav">
-    <div class="container">
+    <div class="nav-container">
       <router-link id="home-link" to="/"><h1>WMM Dashboards</h1></router-link>
 
       <router-link v-if="$auth.isAuthenticated"
@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
   nav {
+    height: 80px;
     a {
       font-weight: bold;
       color: #2c3e50;
@@ -40,17 +41,15 @@ export default {
       }
     }
     button {
-      
+
     }
-    height: 80px;
-    padding: 0 20px;
-    .container {
-      width: 100%;
-      max-width: 1140px;
-      margin: 0 auto;
+    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
     #home-link, h1 {
       text-decoration: none;

@@ -39,6 +39,11 @@ button {
   color: #2c3e50;
   // height: 100%;
 }
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 a {
   display: flex;
   justify-content: center;
@@ -46,5 +51,8 @@ a {
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+img {
+  display: block;
 }
 </style>
