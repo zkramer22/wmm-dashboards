@@ -4,6 +4,10 @@
       <h2>Welcome! Let's get started. <br>
         Log in using your provided WMM credentials.</h2>
     </div>
+    <div v-if="$auth.isAuthenticated" class="greeting-div">
+      <h2>Dashboards are ready to view in your Profile. <br>
+        </h2>
+    </div>
     <img alt="Vue logo" src="@/assets/westcott-logo.png">
   </div>
 </template>
@@ -24,14 +28,14 @@ export default {
     align-items: center;
     position: relative;
     .greeting-div {
-      position: absolute;
+      // position: absolute;
       margin-top: 100px;
       z-index: 1;
       width: 800px;
       top: 0;
     }
     img {
-      position: absolute;
+      // position: absolute;
       top: 0px;
       max-width: 500px;
       height: auto;

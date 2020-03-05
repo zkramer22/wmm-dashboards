@@ -9,22 +9,22 @@
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || $auth.user.name === 'admin'">
         <router-link class="router-link" :to="{ name: 'sixshooter-artist', params: {} }">
           <div class="link-img-container">
-            <img src="@/assets/TheDeadSouth-bandPhoto.jpg" alt="">
+            <h2 style="background-color: #ff6d6d">Ad</h2>
           </div>
           <p>Artist Dashboard</p>
         </router-link>
         <!-- <router-link :to="{ name: 'sixshooter-label', params: {} }">Label Dashboard</router-link> -->
         <router-link class="router-link" :to="{ name: 'sixshooter-adtracker', params: {} }">
           <div class="link-img-container">
-            <h2 style="background-color: #6ddbff">Ad</h2>
+            <h2 style="background-color: #6ddbff">At</h2>
           </div>
           <p>Ad Tracker</p>
         </router-link>
         <router-link class="router-link" :to="{ name: 'sixshooter-roster', params: {} }">
           <div class="link-img-container">
-            <h2 style="background-color: lightgreen">Rt</h2>
+            <h2 style="background-color: lightgreen">Mr</h2>
           </div>
-          <p>Roster Template</p>
+          <p>My Roster</p>
         </router-link>
       </div>
 
