@@ -1,9 +1,8 @@
 <template lang="html">
-  <div class="profile-wrapper">
+  <section class="profile-wrapper">
     <div class="container">
       <div class="user-info-wrapper">
-        <h2>{{ $auth.user.name }}</h2>
-        <p>{{ $auth.user.email }}</p>
+        <h2 style="margin: 30px auto 0 auto">{{ $auth.user.name }}'s Profile</h2>
       </div>
 
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || $auth.user.name === 'admin'">
@@ -37,7 +36,7 @@
         </router-link>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -67,6 +66,10 @@ export default {
         margin: 30px;
         width: 200px;
         height: auto;
+        transition: filter .1s ease-out;
+        &:hover {
+          filter: brightness(0.7);
+        }
         &:visited {
           color: inherit;
         }

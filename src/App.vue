@@ -17,6 +17,26 @@
 </script>
 
 <style lang="scss">
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideup {
+  0% {
+    top: 20px;
+    opacity: 0;
+    box-shadow: 0 0 0 0 darkgray;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+    box-shadow: 0 2px 5px 7px darkgray;
+  }
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -38,6 +58,9 @@ button {
   text-align: center;
   color: #2c3e50;
   // height: 100%;
+}
+section, nav {
+  animation: fadein .5s ease-out;
 }
 .container {
   max-width: 1140px;

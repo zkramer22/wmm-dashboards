@@ -4,6 +4,9 @@
       <div id="nav-left">
         <router-link id="home-link" to="/"><h1>WMM Dashboards</h1></router-link>
       </div>
+      <div id="nav-middle">
+        <p class="hi" style="user-select: none" v-if="$auth.isAuthenticated">hi, {{$auth.user.name}}</p>
+      </div>
 
       <div id="nav-right">
         <router-link v-if="$auth.isAuthenticated" class="nav-link"
@@ -36,8 +39,11 @@ export default {
 
 <style lang="scss" scoped>
   nav {
+    position: relative;
+    z-index: 100;
     height: 80px;
-    background-color: #f1f1f1;
+    // background-color: #f1f1f1;
+    background-color: #f0f2f5;
     box-shadow: 0px 0px 7px 0px darkgrey;
     .nav-container {
       display: flex;
@@ -47,10 +53,16 @@ export default {
       margin: 0 auto;
       padding: 0 20px;
       #nav-left {
-
+        width: 33%;
+        display: flex;
+      }
+      #nav-middle {
+        width: 34%;
       }
       #nav-right {
         display: flex;
+        justify-content: flex-end;
+        width: 33%;
         .nav-link {
           margin: 0 20px;
         }
@@ -60,11 +72,19 @@ export default {
       text-decoration: none;
     }
     a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-weight: bold;
       color: #2c3e50;
+      transition: color .13s ease-out;
       &.router-link-exact-active {
-        color: #42b983;
+        color: #4b9aee;
       }
+    }
+    p {
+      margin: auto;
+      font-size: 12px;
     }
   }
 </style>

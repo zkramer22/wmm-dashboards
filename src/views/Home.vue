@@ -1,15 +1,15 @@
 <template>
-  <div id="home">
+  <section id="home">
     <div v-if="!$auth.isAuthenticated" class="greeting-div">
       <h2>Welcome! Let's get started. <br>
         Log in using your provided WMM credentials.</h2>
     </div>
     <div v-if="$auth.isAuthenticated" class="greeting-div">
-      <h2>Dashboards are ready to view in your Profile. <br>
+      <h2>We're taking the power back from 🍎 on behalf of artists.<br>
         </h2>
     </div>
     <img alt="Vue logo" src="@/assets/westcott-logo.png">
-  </div>
+  </section>
 </template>
 
 <script>
