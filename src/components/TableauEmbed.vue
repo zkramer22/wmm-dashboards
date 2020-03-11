@@ -39,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    this.checkIframeLoaded()
+    // this.checkIframeLoaded()
   }
 }
 </script>
