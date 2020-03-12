@@ -46,9 +46,11 @@ const routes = [
   {
     path: '/profile/sixshooter-adtracker',
     name: 'sixshooter-adtracker',
-    component: AirtableEmbed,
+    // component: AirtableEmbed,
+    component: TableauEmbed,
     props: {
-      url: 'https://airtable.com/embed/shru0eyoslvCK8TpZ?backgroundColor=green&viewControls=on',
+      // url: 'https://airtable.com/embed/shrhNxV4dk3Jn2MKI?backgroundColor=cyan&viewControls=on',
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/AdSpendfulltable?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
       width: '100%',
       height: '100%'
     },
