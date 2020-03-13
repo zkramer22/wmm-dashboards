@@ -25,6 +25,12 @@
           </div>
           <p>My Roster</p>
         </router-link>
+        <router-link class="router-link" :to="{ name: 'sixshooter-ad-content', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: rebeccapurple">Ac</h2>
+          </div>
+          <p>Ad Content</p>
+        </router-link>
       </div>
 
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'EOne' || $auth.user.name === 'admin'">

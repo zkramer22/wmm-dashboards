@@ -66,6 +66,17 @@ const routes = [
       height: '100%'
     },
     beforeEnter: authGuard
+  },
+  {
+    path: '/profile/sixshooter-ad-content',
+    name: 'sixshooter-ad-content',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shr8NXx6yt3ghXMG7?backgroundColor=red&viewControls=on',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
   }
 ]
 
