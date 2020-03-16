@@ -2,7 +2,7 @@
   <section class="profile-wrapper">
     <div class="container">
       <div class="user-info-wrapper">
-        <h2 style="margin: 30px auto 0 auto">{{ $auth.user.name }}'s Profile</h2>
+        <h2 style="margin: 0 auto">{{ $auth.user.name }}'s Profile</h2>
       </div>
 
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || $auth.user.name === 'admin'">
@@ -61,15 +61,19 @@ export default {
 <style lang="scss" scoped>
   .profile-wrapper {
     .user-info-wrapper {
-
+      margin: 35px auto;
+      h2 {
+        font-size: 30px;
+      }
     }
     .profile-link-wrapper {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      margin: 25px auto;
       .router-link {
         display: block;
-        margin: 30px;
+        margin: 0 15px auto;
         width: 200px;
         height: auto;
         transition: filter .1s ease-out;
