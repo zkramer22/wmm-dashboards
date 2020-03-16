@@ -8,7 +8,7 @@
       <h2>Welcome! Let's get started. <br>
         Log in using your provided WMM credentials.</h2>
     </div> -->
-    <img alt="Vue logo" src="@/assets/westcott-logo.png">
+    <img alt="Westcott Multimedia logo" src="@/assets/westcott-logo.png">
   </section>
 </template>
 
