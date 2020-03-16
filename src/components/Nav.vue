@@ -2,7 +2,7 @@
   <nav id="nav">
     <div class="nav-container">
       <div id="nav-left">
-        <router-link id="home-link" to="/"><h1>WMM Dashboards</h1></router-link>
+        <router-link id="home-link" to="/"><h1>Orange</h1></router-link>
       </div>
       <div id="nav-middle">
         <p class="hi" style="user-select: none" v-if="$auth.isAuthenticated">hi, {{$auth.user.name}}</p>
@@ -12,7 +12,7 @@
         <router-link v-if="$auth.isAuthenticated" class="nav-link"
         :to="{ name: 'profile', params: {} }">Profile</router-link>
 
-        <div v-if="!$auth.loading">
+        <div class="auth-button" v-if="!$auth.loading">
           <button v-if="!$auth.isAuthenticated" @click="login">Log in</button>
           <button v-if="$auth.isAuthenticated" @click="logout">Log out</button>
         </div>
@@ -50,6 +50,7 @@ export default {
       justify-content: space-between;
       align-items: center;
       max-width: 1140px;
+      height: 100%;
       margin: 0 auto;
       padding: 0 20px;
       #nav-left {
@@ -64,7 +65,13 @@ export default {
         justify-content: flex-end;
         width: 33%;
         .nav-link {
-          margin: 0 20px;
+          margin-right: 20px;
+        }
+        .auth-button {
+          width: 70px;
+          button {
+            width: 100%;
+          }
         }
       }
     }
