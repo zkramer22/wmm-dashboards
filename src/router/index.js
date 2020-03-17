@@ -46,11 +46,9 @@ const routes = [
   {
     path: '/profile/sixshooter-adtracker',
     name: 'sixshooter-adtracker',
-    // component: AirtableEmbed,
     component: TableauEmbed,
     props: {
-      // url: 'https://airtable.com/embed/shrhNxV4dk3Jn2MKI?backgroundColor=cyan&viewControls=on',
-      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/AdSpendfulltable?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/AdvertisementTracker?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
       width: '100%',
       height: '100%'
     },
@@ -73,6 +71,28 @@ const routes = [
     component: AirtableEmbed,
     props: {
       url: 'https://airtable.com/embed/shr8NXx6yt3ghXMG7?backgroundColor=red&viewControls=on',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
+    path: '/profile/sixshooter-bugs',
+    name: 'sixshooter-bugs',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shrA1U3HS4S8JZDja?backgroundColor=yellow&viewControls=on',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
+    path: '/profile/sixshooter-sys-prefs',
+    name: 'sixshooter-sys-prefs',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shrtyUIMNeaACPJiB?backgroundColor=yellow&viewControls=on',
       width: '100%',
       height: '100%'
     },
