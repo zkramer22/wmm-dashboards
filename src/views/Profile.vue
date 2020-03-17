@@ -21,15 +21,27 @@
         </router-link>
         <router-link class="router-link" :to="{ name: 'sixshooter-roster', params: {} }">
           <div class="link-img-container">
-            <h2 style="background-color: lightgreen">Mr</h2>
+            <h2 style="background-color: #90EE90">Mr</h2>
           </div>
           <p>My Roster</p>
         </router-link>
         <router-link class="router-link" :to="{ name: 'sixshooter-ad-content', params: {} }">
           <div class="link-img-container">
-            <h2 style="background-color: rebeccapurple">Ac</h2>
+            <h2 style="background-color: #663399">Ac</h2>
           </div>
           <p>Ad Content</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'sixshooter-bugs', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #b5b5b5">Bt</h2>
+          </div>
+          <p>Bug Tracker</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'sixshooter-sys-prefs', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #ff9633">Sp</h2>
+          </div>
+          <p>System Preferences</p>
         </router-link>
       </div>
 
