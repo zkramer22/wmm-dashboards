@@ -82,6 +82,7 @@ const routes = [
     component: AirtableEmbed,
     props: {
       url: 'https://airtable.com/embed/shrA1U3HS4S8JZDja?backgroundColor=yellow&viewControls=on',
+      modalUrl: 'https://airtable.com/embed/shruFMgpWcgelwQ3B?backgroundColor=yellowLight',
       width: '100%',
       height: '100%'
     },
