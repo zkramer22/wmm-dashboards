@@ -2,7 +2,7 @@
   <section class="profile-wrapper">
     <div class="container">
       <div class="user-info-wrapper">
-        <h2 style="margin: 0 auto">{{ $auth.user.name }}'s Profile</h2>
+        <h1 style="margin: 0 auto">{{ $auth.user.name }}'s Profile</h1>
       </div>
 
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || $auth.user.name === 'admin'">
@@ -18,6 +18,12 @@
             <h2 style="background-color: #6ddbff">At</h2>
           </div>
           <p>Ad Tracker</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'sixshooter-marketing-actions', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #fdff6a">Ma</h2>
+          </div>
+          <p>Marketing Actions</p>
         </router-link>
         <router-link class="router-link" :to="{ name: 'sixshooter-roster', params: {} }">
           <div class="link-img-container">
@@ -74,7 +80,7 @@ export default {
   .profile-wrapper {
     .user-info-wrapper {
       margin: 35px auto;
-      h2 {
+      h1 {
         font-size: 30px;
       }
     }
@@ -89,11 +95,11 @@ export default {
         width: 200px;
         height: auto;
         transition: filter .1s ease-out;
+        color: #2c3e50;
         &:hover {
           filter: brightness(0.7);
         }
         &:visited {
-          color: inherit;
         }
         .link-img-container {
           border-radius: 20px;
@@ -108,10 +114,17 @@ export default {
             justify-content: center;
             align-items: center;
             font-size: 50px;
+            border: 2px solid #2c3e50;
+            border-radius: 20px;
             margin: 0 auto;
-            width: 200px;
+            width: auto;
             height: 200px;
             color: white;
+            // -webkit-text-stroke: 2px #2c3e50;
+            text-shadow: -2px 3px 0 #2c3e50,
+                          1px 1px 0 #2c3e50,
+                         1px -1px 0 #2c3e50,
+                        -1px -1px 0 #2c3e50;
           }
         }
       }
