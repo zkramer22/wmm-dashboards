@@ -78,6 +78,18 @@ const routes = [
     beforeEnter: authGuard
   },
   {
+    path: '/profile/sixshooter-marketing-actions',
+    name: 'sixshooter-marketing-actions',
+    component: AirtableEmbed,
+    props: {
+      url: 'https://airtable.com/embed/shrSWdwflvYhL3Wk1?backgroundColor=greenLight&viewControls=on',
+      modalUrl: 'https://airtable.com/embed/shr6gPiD9eUrhyrKV?backgroundColor=greenLight',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
     path: '/profile/sixshooter-bugs',
     name: 'sixshooter-bugs',
     component: AirtableEmbed,
