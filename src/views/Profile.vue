@@ -52,11 +52,17 @@
       </div>
 
       <div class="profile-link-wrapper" v-if="$auth.user.name === 'EOne' || $auth.user.name === 'admin'">
-        <router-link :to="{ name: 'eone-artist', params: {} }">
-          Artist Dashboard
+        <router-link class="router-link" :to="{ name: 'eone-artist', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #ff6d6d">Ad</h2>
+          </div>
+          <p>Artist Dashboard</p>
         </router-link>
-        <router-link :to="{ name: 'eone-label', params: {} }">
-          Label Dashboard
+        <router-link class="router-link" :to="{ name: 'eone-label', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #ff9e6d">Ld</h2>
+          </div>
+          <p>Label Dashboard</p>
         </router-link>
       </div>
     </div>

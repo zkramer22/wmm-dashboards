@@ -55,6 +55,28 @@ const routes = [
     beforeEnter: authGuard
   },
   {
+    path: '/profile/eone-artist',
+    name: 'eone-artist',
+    component: TableauEmbed,
+    props: {
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/eOneDashboardOverview/Dr_DreDashboard?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
+    path: '/profile/eone-label',
+    name: 'eone-label',
+    component: TableauEmbed,
+    props: {
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/eOneDashboardOverview/eOneDashboard?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
+      width: '100%',
+      height: '100%'
+    },
+    beforeEnter: authGuard
+  },
+  {
     path: '/profile/sixshooter-roster',
     name: 'sixshooter-roster',
     component: AirtableEmbed,
@@ -111,7 +133,8 @@ const routes = [
       height: '100%'
     },
     beforeEnter: authGuard
-  }
+  },
+
 ]
 
 const router = new VueRouter({
