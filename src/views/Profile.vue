@@ -134,13 +134,8 @@ export default {
     }
   },
   data() {
-    if (this.$auth.user.name === 'admin') {
-      return {
-        emu: null
-      }
-    }
-    else {
-      return {}
+    return {
+      emu: null
     }
   },
   created() {
