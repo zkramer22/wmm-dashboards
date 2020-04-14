@@ -202,8 +202,7 @@ const routes = [
       height: '100%'
     },
     beforeEnter: authGuard
-  },
-
+  }
 ]
 
 const router = new VueRouter({
