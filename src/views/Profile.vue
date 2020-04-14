@@ -5,14 +5,27 @@
         <h1 style="margin: 0 auto">{{ $auth.user.name }}'s Profile</h1>
       </div>
 
-      <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || $auth.user.name === 'admin'">
+      <div class="" v-if="$auth.user.name === 'admin'">
+        <p>select a user's profile to emulate:</p>
+        <div class="admin-emu-selector">
+          <div class="emu-choice" @click="adminSwitchProfile(0)">Sixshooter</div>
+          <div class="emu-choice" @click="adminSwitchProfile(1)">EOne</div>
+        </div>
+      </div>
+
+      <div class="profile-link-wrapper" v-if="$auth.user.name === 'SixShooter' || emu === 0">
         <router-link class="router-link" :to="{ name: 'sixshooter-artist', params: {} }">
           <div class="link-img-container">
             <h2 style="background-color: #ff6d6d">Ad</h2>
           </div>
           <p>Artist Dashboard</p>
         </router-link>
-        <!-- <router-link :to="{ name: 'sixshooter-label', params: {} }">Label Dashboard</router-link> -->
+        <!-- <router-link class="router-link" :to="{ name: 'sixshooter-label', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #ff9e6d">Dd</h2>
+          </div>
+          <p>Label Dashboard</p>
+        </router-link> -->
         <router-link class="router-link" :to="{ name: 'sixshooter-adtracker', params: {} }">
           <div class="link-img-container">
             <h2 style="background-color: #6ddbff">At</h2>
@@ -51,7 +64,7 @@
         </router-link>
       </div>
 
-      <div class="profile-link-wrapper" v-if="$auth.user.name === 'EOne' || $auth.user.name === 'admin'">
+      <div class="profile-link-wrapper" v-if="$auth.user.name === 'EOne' || emu === 1">
         <router-link class="router-link" :to="{ name: 'eone-artist', params: {} }">
           <div class="link-img-container">
             <h2 style="background-color: #ff6d6d">Ad</h2>
@@ -60,9 +73,45 @@
         </router-link>
         <router-link class="router-link" :to="{ name: 'eone-label', params: {} }">
           <div class="link-img-container">
-            <h2 style="background-color: #ff9e6d">Ld</h2>
+            <h2 style="background-color: #ff9e6d">Dd</h2>
           </div>
-          <p>Label Dashboard</p>
+          <p>Distributor Dashboard</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-adtracker', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #6ddbff">At</h2>
+          </div>
+          <p>Ad Tracker</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-marketing-actions', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #fdff6a">Ma</h2>
+          </div>
+          <p>Marketing Actions</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-roster', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #90EE90">Mr</h2>
+          </div>
+          <p>My Roster</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-ad-content', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #663399">Ac</h2>
+          </div>
+          <p>Ad Content</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-bugs', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #b5b5b5">Bt</h2>
+          </div>
+          <p>Bug Tracker</p>
+        </router-link>
+        <router-link class="router-link" :to="{ name: 'eone-sys-prefs', params: {} }">
+          <div class="link-img-container">
+            <h2 style="background-color: #ff9633">Sp</h2>
+          </div>
+          <p>System Preferences</p>
         </router-link>
       </div>
     </div>
@@ -71,9 +120,27 @@
 
 <script>
 export default {
+  methods: {
+    adminSwitchProfile(selection) {
+      if (this.$auth.user.name === 'admin') {
+        const emuChoices = document.getElementsByClassName('emu-choice')
+        emuChoices.forEach(emu => emu.classList.remove('active'))
+        this.emu = selection
+        emuChoices[this.emu].classList.add('active')
+      }
+      else {
+        return
+      }
+    }
+  },
   data() {
-    return {
-
+    if (this.$auth.user.name === 'admin') {
+      return {
+        emu: null
+      }
+    }
+    else {
+      return {}
     }
   },
   created() {
@@ -88,6 +155,28 @@ export default {
       margin: 35px auto;
       h1 {
         font-size: 30px;
+      }
+    }
+    .admin-emu-selector {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      .emu-choice {
+        margin: 10px 20px;
+        border: 2px solid black;
+        box-shadow: 0px 4px 2px 0px lightgrey;
+        border-radius: 10px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        user-select: none;
+        cursor: pointer;
+        transition: background-color .1s linear;
+        &.active {
+          background-color: lightgreen;
+        }
       }
     }
     .profile-link-wrapper {
