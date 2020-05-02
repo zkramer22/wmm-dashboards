@@ -186,7 +186,7 @@ const routes = [
     name: 'sixshooter-sys-prefs',
     component: AirtableEmbed,
     props: {
-      url: 'https://airtable.com/embed/shrtyUIMNeaACPJiB?backgroundColor=yellow&viewControls=on',
+      url: 'https://airtable.com/embed/shrCqCSnPqo8R5JBU?backgroundColor=pinkLight&viewControls=on',
       width: '100%',
       height: '100%'
     },
