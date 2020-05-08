@@ -70,7 +70,7 @@ const routes = [
     name: 'sixshooter-adtracker',
     component: TableauEmbed,
     props: {
-      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/AdvertisementTracker?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/AdTrackerDashboard?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
       width: '100%',
       height: '100%'
     },
