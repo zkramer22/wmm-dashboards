@@ -26,8 +26,7 @@ const routes = [
     name: 'sixshooter-artist',
     component: TableauEmbed,
     props: {
-      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/Story1?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link:embed=yes:toolbar=no',
-      // url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/TDSArtistDashboardREORG?:embed=yes:toolbar=no',
+      url: 'https://10ay.online.tableau.com/t/westcottmultimedia/views/SixShooterDashboards/Story1?:embed=y&:display_count=n&:showAppBanner=false&:origin=viz_share_link&:showVizHome=n:embed=yes:toolbar=no',
       width: '1100',
       height: '100%'
     },
