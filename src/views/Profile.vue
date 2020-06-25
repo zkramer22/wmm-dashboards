@@ -26,12 +26,12 @@
           </div>
           <p>Label Dashboard</p>
         </router-link> -->
-        <router-link class="router-link" :to="{ name: 'sixshooter-adtracker', params: {} }">
+        <!-- <router-link class="router-link" :to="{ name: 'sixshooter-adtracker', params: {} }">
           <div class="link-img-container">
             <h2 style="background-color: #6ddbff">At</h2>
           </div>
           <p>Ad Tracker</p>
-        </router-link>
+        </router-link> -->
         <router-link class="router-link" :to="{ name: 'sixshooter-marketing-actions', params: {} }">
           <div class="link-img-container">
             <h2 style="background-color: #fdff6a">Ma</h2>
